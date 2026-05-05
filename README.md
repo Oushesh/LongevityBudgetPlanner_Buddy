@@ -6,7 +6,29 @@ high-value health and longevity interventions.
 ## Project Layout
 
 - `django/`: Django + Django REST Framework backend using `uv` and `pyproject.toml`.
+- `frontend/`: Next.js demo UI (auth, budget form, catalog table, plan, coach).
 - `rust/`: reserved folder for future performance-critical planning components.
+
+## How the budget planner works (user journey)
+
+1. **Sign up / sign in** — JWT access token is used for all planner and coach calls.
+2. **Profile & budget** — You save age, region, insurance type (GKV/PKV), income, fixed costs, optional monthly “longevity” cap, and **goals** (sleep, diagnostics, supplements, etc.).
+3. **Catalog (optional)** — `GET /planner/interventions` lists interventions with **trust**, **purity**, **bioavailability**, and formulation **quality** scores (0–10). The engine ranks options by weighted scores divided by monthly cost.
+4. **Generate plan** — You pick a scenario (`conservative` / `balanced` / `aggressive`). The API allocates your longevity budget into concrete line items with rationales and embedded intervention scores.
+5. **Coach** — `POST /coach/recommend` returns grounded next steps from your plan (swap in a full chatbot/LLM later).
+
+Automated API journey tests live in `django/tests/test_budget_planner_journey.py`; ranking logic tests in `django/planner/tests/test_scoring.py`.
+
+## Frontend (Next.js)
+
+```bash
+cd frontend
+cp .env.local.example .env.local
+npm install
+npm run dev
+```
+
+Run Django on port 8000 with CORS allowing `http://localhost:3000` (see `django/.env.example`).
 
 ## MVP Features (Implemented)
 
@@ -15,7 +37,7 @@ high-value health and longevity interventions.
   - `conservative`
   - `balanced`
   - `aggressive`
-- Budget line-item generation using quality/trust vs cost ranking.
+- Budget line-item generation using trust, purity, bioavailability, and formulation quality vs monthly cost.
 - Coach recommendation endpoint grounded on generated plan outputs.
 - Seed command for default intervention options in Germany.
 
@@ -39,6 +61,7 @@ uv run python manage.py runserver
 - `GET /auth/me`
 - `POST /auth/password/reset` (body: `{"email": "..."}` – sends email with uid/token; same response for unknown emails)
 - `POST /auth/password/reset/confirm` (body: `uid`, `token`, `new_password`)
+- `GET /planner/interventions`
 - `POST /planner/inputs`
 - `POST /planner/generate`
 - `GET /planner/plans/{id}`
