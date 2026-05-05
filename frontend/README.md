@@ -1,5 +1,7 @@
 # Longevity Budget Planner (Next.js)
 
+
+
 Demo UI for the Django API: register, save profile and budget, browse the intervention catalog (purity / trust / bioavailability), generate a monthly plan, and get coach tips.
 
 ## Setup
