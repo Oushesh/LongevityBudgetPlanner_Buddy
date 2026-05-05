@@ -11,13 +11,25 @@ SCENARIO_BUDGET_MULTIPLIER = {
     BudgetPlan.Scenario.AGGRESSIVE: Decimal("1.00"),
 }
 
+# Value-per-cost ranking: trust, purity, bioavailability, overall formulation quality.
+WEIGHT_TRUST = Decimal("0.30")
+WEIGHT_PURITY = Decimal("0.25")
+WEIGHT_BIOAVAILABILITY = Decimal("0.25")
+WEIGHT_QUALITY = Decimal("0.20")
+
+
+def _dec(val) -> Decimal:
+    return val if isinstance(val, Decimal) else Decimal(str(val))
+
 
 def score_option(option: InterventionOption) -> Decimal:
-    # Prefer trustworthy and high-quality interventions at lower monthly cost.
-    effectiveness = (option.quality_score * Decimal("0.6")) + (
-        option.trust_score * Decimal("0.4")
+    effectiveness = (
+        _dec(option.trust_score) * WEIGHT_TRUST
+        + _dec(option.purity_score) * WEIGHT_PURITY
+        + _dec(option.bioavailability_score) * WEIGHT_BIOAVAILABILITY
+        + _dec(option.quality_score) * WEIGHT_QUALITY
     )
-    return effectiveness / max(option.monthly_cost, Decimal("1"))
+    return effectiveness / max(_dec(option.monthly_cost), Decimal("1"))
 
 
 def compute_disposable_budget(user: UserProfile) -> Decimal:
@@ -65,8 +77,10 @@ def generate_plan(user: UserProfile, scenario: str) -> BudgetPlan:
             category=option.category,
             monthly_allocation=allocation,
             rationale=(
-                f"Selected for quality ({option.quality_score}) and trust "
-                f"({option.trust_score}) relative to cost."
+                f"Ranked by value vs monthly cost using trust ({option.trust_score}), "
+                f"purity ({option.purity_score}), bioavailability "
+                f"({option.bioavailability_score}), formulation quality "
+                f"({option.quality_score})."
             ),
         )
         remaining -= allocation

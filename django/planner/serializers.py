@@ -35,7 +35,26 @@ class GeneratePlanSerializer(serializers.Serializer):
     scenario = serializers.ChoiceField(choices=BudgetPlan.Scenario.choices)
 
 
+class InterventionOptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InterventionOption
+        fields = (
+            "id",
+            "name",
+            "category",
+            "monthly_cost",
+            "quality_score",
+            "purity_score",
+            "bioavailability_score",
+            "trust_score",
+            "available_in_region",
+            "insurance_hint",
+        )
+
+
 class BudgetLineItemSerializer(serializers.ModelSerializer):
+    intervention = InterventionOptionSerializer(read_only=True)
+
     class Meta:
         model = BudgetLineItem
         fields = (
@@ -43,6 +62,7 @@ class BudgetLineItemSerializer(serializers.ModelSerializer):
             "category",
             "monthly_allocation",
             "rationale",
+            "intervention",
         )
 
 
@@ -58,21 +78,6 @@ class BudgetPlanSerializer(serializers.ModelSerializer):
             "summary",
             "line_items",
             "created_at",
-        )
-
-
-class InterventionOptionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = InterventionOption
-        fields = (
-            "id",
-            "name",
-            "category",
-            "monthly_cost",
-            "quality_score",
-            "trust_score",
-            "available_in_region",
-            "insurance_hint",
         )
 
 

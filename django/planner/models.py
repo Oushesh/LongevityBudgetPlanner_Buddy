@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.db import models
 
 
@@ -46,6 +48,18 @@ class InterventionOption(models.Model):
     category = models.CharField(max_length=32, choices=Category.choices)
     monthly_cost = models.DecimalField(max_digits=10, decimal_places=2)
     quality_score = models.DecimalField(max_digits=4, decimal_places=2)
+    purity_score = models.DecimalField(
+        max_digits=4,
+        decimal_places=2,
+        default=Decimal("8.0"),
+        help_text="Label purity / third-party testing rigor (0–10).",
+    )
+    bioavailability_score = models.DecimalField(
+        max_digits=4,
+        decimal_places=2,
+        default=Decimal("8.0"),
+        help_text="Expected absorption / formulation quality (0–10).",
+    )
     trust_score = models.DecimalField(max_digits=4, decimal_places=2)
     available_in_region = models.CharField(max_length=128, blank=True, default="Germany")
     insurance_hint = models.CharField(max_length=3, blank=True, default="")

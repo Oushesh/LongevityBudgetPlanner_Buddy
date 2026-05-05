@@ -12,6 +12,7 @@ env = environ.Env(
     PASSWORD_RESET_FRONTEND_BASE_URL=(str, ""),
     EMAIL_BACKEND=(str, "django.core.mail.backends.console.EmailBackend"),
     DEFAULT_FROM_EMAIL=(str, "noreply@localhost"),
+    CORS_ALLOWED_ORIGINS=(list, ["http://127.0.0.1:3000", "http://localhost:3000"]),
 )
 environ.Env.read_env(BASE_DIR / ".env")
 
@@ -26,6 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt.token_blacklist",
     "users",
@@ -47,6 +49,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -102,3 +105,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 EMAIL_BACKEND = env("EMAIL_BACKEND")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
 PASSWORD_RESET_FRONTEND_BASE_URL = env("PASSWORD_RESET_FRONTEND_BASE_URL")
+
+CORS_ALLOWED_ORIGINS = env("CORS_ALLOWED_ORIGINS")
+CORS_ALLOW_CREDENTIALS = True

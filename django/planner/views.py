@@ -4,10 +4,11 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from planner.models import BudgetPlan, UserProfile
+from planner.models import BudgetPlan, InterventionOption, UserProfile
 from planner.serializers import (
     BudgetPlanSerializer,
     GeneratePlanSerializer,
+    InterventionOptionSerializer,
     UserProfileInputSerializer,
     upsert_user_with_budget,
 )
@@ -50,6 +51,16 @@ class PlannerDetailView(APIView):
     def get(self, request, plan_id):
         plan = get_object_or_404(BudgetPlan, id=plan_id, user__email=request.user.email)
         return Response(BudgetPlanSerializer(plan).data)
+
+
+class InterventionListView(APIView):
+    """Read-only catalog of interventions (supplements, diagnostics, etc.)."""
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        qs = InterventionOption.objects.all().order_by("category", "name")
+        return Response(InterventionOptionSerializer(qs, many=True).data)
 
 
 class PlannerRecalculateView(APIView):
