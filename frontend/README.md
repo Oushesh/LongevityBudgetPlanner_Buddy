@@ -6,10 +6,13 @@ Demo UI for the Django API: register, save profile and budget, browse the interv
 
 ## Setup
 
+This project uses [pnpm](https://pnpm.io) (pinned via the `packageManager` field in `package.json`). The easiest way to use the right version is via Corepack, which ships with Node.js 22+:
+
 ```bash
+corepack enable   # one-time, picks up pnpm@11 from package.json
 cp .env.local.example .env.local
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000). Point `NEXT_PUBLIC_API_URL` at your Django server (default `http://127.0.0.1:8000`).

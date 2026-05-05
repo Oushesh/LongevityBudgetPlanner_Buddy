@@ -21,11 +21,14 @@ Automated API journey tests live in `django/tests/test_budget_planner_journey.py
 
 ## Frontend (Next.js)
 
+The frontend uses [pnpm](https://pnpm.io) (pinned to `pnpm@11` via the `packageManager` field). Enable Corepack once so the right version is shimmed automatically:
+
 ```bash
+corepack enable   # one-time
 cd frontend
 cp .env.local.example .env.local
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Run Django on port 8000 with CORS allowing `http://localhost:3000` (see `django/.env.example`).

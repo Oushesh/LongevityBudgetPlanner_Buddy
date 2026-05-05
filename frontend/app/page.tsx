@@ -77,7 +77,7 @@ export default function Home() {
           <br />
           Run this UI:{" "}
           <code className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-zinc-950">
-            cd frontend && npm run dev
+            cd frontend && pnpm dev
           </code>{" "}
           — set{" "}
           <code className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-zinc-950">
