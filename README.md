@@ -98,3 +98,27 @@ After `POST /auth/logout`, the **refresh** token is blacklisted and cannot be us
 cd django
 uv run python manage.py test
 ```
+
+## End-to-end app connection tests
+
+Use the root `Makefile` to verify frontend and backend integration by running the Playwright login-click smoke test.
+
+### Normal (local machine)
+
+Starts Django on `127.0.0.1:8000`, Next.js on `localhost:3000`, then runs the E2E test:
+
+```bash
+make test-local
+```
+
+### Docker
+
+Runs backend + frontend + Playwright test in containers through `docker-compose.test.yml`:
+
+```bash
+make test-docker
+```
+
+Notes:
+- `make test-local` expects Django venv dependencies already installed in `django/.venv`.
+- `make test-docker` requires Docker with Compose support.
