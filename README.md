@@ -98,3 +98,15 @@ After `POST /auth/logout`, the **refresh** token is blacklisted and cannot be us
 cd django
 uv run python manage.py test
 ```
+
+
+## Product Discovery Features: 
+```
+   Most of the really good longevity products in Case 1: 
+   Extra Virgin Oliv Oil have the least amount of exposure online
+   Specially as buyers move more from typical Search Engine like Google Search towards
+   a more Agentic AI Search most of the products even provided by Gemini or Claude dont
+   appear in the list. So users miss it and companies (the new ones lose visibility, traffic and 
+   potentially really good customers)
+```
+
