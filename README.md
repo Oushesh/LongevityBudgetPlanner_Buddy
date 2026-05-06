@@ -122,3 +122,4 @@ make test-docker
 Notes:
 - `make test-local` expects Django venv dependencies already installed in `django/.venv`.
 - `make test-docker` requires Docker with Compose support.
+
