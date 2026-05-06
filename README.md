@@ -100,7 +100,7 @@ uv run python manage.py test
 ```
 
 
-## Product Discovery Features: 
+## Extra Feature 01: Product Discovery Features: 
 ```
    Most of the really good longevity products in Case 1: 
    Extra Virgin Oliv Oil have the least amount of exposure online
@@ -110,3 +110,9 @@ uv run python manage.py test
    potentially really good customers)
 ```
 
+## Extra Feature 02: Longevity Physicians
+   Talk to them: Call the Longevity Physicians in Germany.
+
+## Connect the budget planner to the longevity Physician to the other ones. 
+   TBD.
+   
