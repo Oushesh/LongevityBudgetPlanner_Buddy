@@ -31,3 +31,19 @@ uv run python manage.py runserver
 ```
 
 Ensure `CORS_ALLOWED_ORIGINS` in Django includes `http://localhost:3000` and `http://127.0.0.1:3000` (see `django/.env.example`).
+
+## Connection smoke test (frontend click -> backend response)
+
+This test opens the login page, clicks **Sign in**, and verifies a handled login error comes back from the API. If the backend is down, this test fails.
+
+Prerequisites:
+- Django API running at `http://127.0.0.1:8000`
+- Next.js frontend running at `http://127.0.0.1:3000`
+
+Run:
+
+```bash
+pnpm install
+pnpm exec playwright install chromium
+pnpm test:e2e
+```
