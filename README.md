@@ -99,6 +99,7 @@ cd django
 uv run python manage.py test
 ```
 
+
 ## End-to-end app connection tests
 
 Use the root `Makefile` to verify frontend and backend integration by running the Playwright login-click smoke test.
@@ -122,4 +123,23 @@ make test-docker
 Notes:
 - `make test-local` expects Django venv dependencies already installed in `django/.venv`.
 - `make test-docker` requires Docker with Compose support.
+
+
+
+## Extra Feature 01: Product Discovery Features: 
+```
+   Most of the really good longevity products in Case 1: 
+   Extra Virgin Oliv Oil have the least amount of exposure online
+   Specially as buyers move more from typical Search Engine like Google Search towards
+   a more Agentic AI Search most of the products even provided by Gemini or Claude dont
+   appear in the list. So users miss it and companies (the new ones lose visibility, traffic and 
+   potentially really good customers)
+```
+
+## Extra Feature 02: Longevity Physicians
+   Talk to them: Call the Longevity Physicians in Germany.
+
+## Connect the budget planner to the longevity Physician to the other ones. 
+   TBD.
+   
 
