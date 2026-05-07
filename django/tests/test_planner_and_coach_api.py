@@ -115,3 +115,5 @@ class PlannerAndCoachApiTests(APITestCase):
     def test_me_endpoint_requires_authentication(self):
         response = self.client.get(reverse("auth-me"))
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+
