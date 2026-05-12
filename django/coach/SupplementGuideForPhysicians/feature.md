@@ -32,4 +32,7 @@
 
 
 ## Advantage over other tools: 
-   
+   No hallucination reduced hallucination for the praxis.
+   Saves praxis lots of time. 
+
+   Graph for the pitch. 
