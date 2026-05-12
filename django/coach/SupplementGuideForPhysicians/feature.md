@@ -23,4 +23,9 @@
 
    https://biohealth-munich.de/en/centre/
 
-   
+
+## Other Alternatives: 
+   Ask the Question: which tools do the physicians use besides 
+   * PubMed
+   * Perplexity, ChatGPT or Gemini 
+   * And then 
