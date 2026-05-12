@@ -29,8 +29,7 @@
    Pull all the documents for Creatine and show how does it work with other supplements
    and iteratively refine the supplement intake. 
 
-## Common Problems he has: 
-   
+## Common Problems he has:    
    Common Cold
    Zinc, Vitamin C, Vitamin D,Umckaloabo
 
@@ -40,3 +39,5 @@
    --> People watch some influencers --> Find evidence which ones. 
 
    Body Temperature measurement with different
+
+
