@@ -10,4 +10,15 @@
 
    14 days waited. 
 
+   --> Wow so we can do a sales here --> Website built 
+
+
+    Community: 
+
+    Give him one Solio EVOO (Solio)
+    Talk to him talk to him then make the shot with him with the lemon juice
+
+    Then make him sign --> QR Code --> direct him to the website of the oliven oil
    
+    https://getsolio.de/
+    
