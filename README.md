@@ -7,7 +7,24 @@ high-value health and longevity interventions.
 
 - `django/`: Django + Django REST Framework backend using `uv` and `pyproject.toml`.
 - `frontend/`: Next.js demo UI (auth, budget form, catalog table, plan, coach).
+- `django_hardware_compliance/`: Hardware compliance API (port **8001**) — Fuchsia-style workflow.
+- `frontend_hardware_compliance/`: Compliance UI (port **3001**) — standards, docs, labs, timeline.
 - `rust/`: reserved folder for future performance-critical planning components.
+
+## Hardware compliance MVP
+
+See [django_hardware_compliance/README.md](django_hardware_compliance/README.md) and [frontend_hardware_compliance/README.md](frontend_hardware_compliance/README.md).
+
+```bash
+cd django_hardware_compliance && uv sync && uv run python manage.py migrate
+uv run python manage.py seed_standards && uv run python manage.py seed_requirements
+uv run python manage.py seed_labs && uv run python manage.py seed_demo_project
+uv run python manage.py runserver 8001
+
+cd frontend_hardware_compliance && pnpm install && pnpm dev
+```
+
+Demo user: `demo` / `demo-password-change-me`
 
 ## How the budget planner works (user journey)
 

@@ -1,11 +1,29 @@
 SHELL := /bin/bash
 
-.PHONY: help test-local test-docker
+.PHONY: help test-local test-docker compliance-dev compliance-test
 
 help:
 	@echo "Available targets:"
-	@echo "  make test-local   # Run frontend<->backend E2E test on local machine"
-	@echo "  make test-docker  # Run frontend<->backend E2E test in Docker Compose"
+	@echo "  make test-local        # Run budget planner frontend<->backend E2E"
+	@echo "  make test-docker       # Run budget planner E2E in Docker Compose"
+	@echo "  make compliance-dev    # Run hardware compliance API (8001) + UI (3001)"
+	@echo "  make compliance-test   # Run hardware compliance Django tests"
+
+compliance-dev:
+	@set -euo pipefail; \
+	ROOT="$$(pwd)"; \
+	trap 'kill $$BACK_PID $$FRONT_PID >/dev/null 2>&1 || true' EXIT; \
+	cd "$$ROOT/django_hardware_compliance"; \
+	uv run python manage.py runserver 127.0.0.1:8001 > /tmp/hcc_backend.log 2>&1 & \
+	BACK_PID=$$!; \
+	cd "$$ROOT/frontend_hardware_compliance"; \
+	pnpm dev > /tmp/hcc_frontend.log 2>&1 & \
+	FRONT_PID=$$!; \
+	echo "API: http://127.0.0.1:8001  UI: http://localhost:3001"; \
+	wait $$BACK_PID $$FRONT_PID
+
+compliance-test:
+	cd django_hardware_compliance && uv run python manage.py test compliance
 
 test-local:
 	@set -euo pipefail; \
