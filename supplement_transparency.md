@@ -19,6 +19,11 @@
 
    We buy anonymously and test it on the fly.
 
-## Feature Number 3:
+   We need the graph: The transparency does it contain what it says it does? 
+
+   Maybe Bioavailability --> 
     
+## Feature Number 3:
+   
+   
    
