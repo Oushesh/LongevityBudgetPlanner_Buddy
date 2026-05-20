@@ -26,3 +26,4 @@ test("register and open dashboard", async ({ page }) => {
   await page.getByRole("button", { name: /Register/ }).click();
   await expect(page).toHaveURL(/dashboard/, { timeout: 15000 });
 });
+
