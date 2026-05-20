@@ -5,7 +5,16 @@ test("landing shows standards and CTA", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "weeks",
   );
-  await expect(page.getByRole("link", { name: "Get started" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "See demo" })).toBeVisible();
+});
+
+test("demo page shows workspace and lab matches", async ({ page }) => {
+  await page.goto("/demo");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "compliance workspace",
+  );
+  await expect(page.getByText("Recommended lab match")).toBeVisible();
+  await expect(page.getByText("TÜV SÜD Product Service")).toBeVisible();
 });
 
 test("register and open dashboard", async ({ page }) => {

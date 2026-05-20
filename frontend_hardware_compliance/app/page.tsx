@@ -51,8 +51,14 @@ export default function Home() {
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
-            href="/register"
+            href="/demo"
             className="rounded-md bg-fuchsia-600 px-6 py-3 text-sm font-medium text-white hover:bg-fuchsia-500"
+          >
+            See demo
+          </Link>
+          <Link
+            href="/register"
+            className="rounded-md border border-zinc-700 px-6 py-3 text-sm font-medium hover:border-zinc-500"
           >
             Get started
           </Link>

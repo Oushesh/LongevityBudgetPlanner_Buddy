@@ -16,6 +16,7 @@ Start the API on port **8001** first — see [django_hardware_compliance](../dja
 
 ## Pages
 
+- `/demo` — Fuchsia reference video + interactive compliance workspace (lab matches tab)
 - `/` — marketing landing, standards table, workflow steps
 - `/register`, `/login` — JWT auth
 - `/dashboard` — project list

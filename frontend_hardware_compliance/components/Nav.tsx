@@ -21,6 +21,16 @@ export function Nav() {
           <span className="text-fuchsia-400">Compliance</span> Buddy
         </Link>
         <nav className="flex items-center gap-4 text-sm">
+          <Link
+            href="/demo"
+            className={
+              pathname === "/demo"
+                ? "text-fuchsia-300"
+                : "text-zinc-400 hover:text-zinc-200"
+            }
+          >
+            Demo
+          </Link>
           {loggedIn ? (
             <>
               <Link
