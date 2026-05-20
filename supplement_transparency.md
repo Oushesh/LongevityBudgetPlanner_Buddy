@@ -1,8 +1,7 @@
 ## Build SuppCo For Germany.
    Platform where users get to the trust score of supplements.
 
-
-   MVP Show Graph of those supplements.
+   MVP Show Graph of those supplements and how good those supplements are.
 
    Second show the Graph of the Olive Oil 
 
