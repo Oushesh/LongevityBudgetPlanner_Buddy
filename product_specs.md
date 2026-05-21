@@ -105,4 +105,57 @@
 
   hazard analysis (HARA)
   UL 3300 certification.
-  
+
+
+## FCC Use Case: 
+   https://www.tuvsud.com/en/services/product-certification/fcc-certification
+
+
+   Use Case: Why FCC Certification is important
+
+   U.S. marine radio and telecoms equipment market, manufacturers and importers must ensure that their products meet all criteria for FCC certification.
+
+
+   Non-compliance may lead to costly delays, fines and forfeitures, as well as reputation-damaging product "recalls"
+
+
+   TÜV Süd: FCC Certification, 
+   
+
+## Contact Lukas Wiesmeier, and other friends within the space.
+
+## One Feature of Software if: 
+   Rules change which parties are affected. 
+
+
+
+## Questionnaire: 
+   1. (Sent) Daniel Sattl Interview
+   2. (To DO) Lukas Wiesmeier: Angsa Robotics --> which innovativ Robotics Company 
+   do we have in Munich? 
+
+   
+   3. Other Robotic Companies:  
+   PICCO Die Service GmbH
+
+   4. Agile Robotics SE --> maybe 
+   5. Franka Robotics GmbH 
+   6. ReActive Robotics GmbH 
+   7. Neura Robotics GmbH 
+      
+   8. Ask: Rafael --> for Longevity
+   9. Ask: https://neura-robotics.com/ --> 
+   10. Franka Emika: Test Robotics. 
+   11.  
+
+   TUM Professor der uns helfen kann --> welche professor an der TUM kann uns helfen ?
+
+
+################################################
+
+###############################################
+
+
+## How about the next thngs? 
+   * https://d11z.com/company/certhub/ 
+   * 
