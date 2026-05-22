@@ -124,6 +124,12 @@
 
 ## Contact Lukas Wiesmeier, and other friends within the space.
 
+   Add the Format Letter here for Lukas Wisemeier: 
+
+
+   ""
+
+
 ## One Feature of Software if: 
    Rules change which parties are affected. 
 
@@ -148,7 +154,7 @@
    10. Franka Emika: Test Robotics. 
    11.  
 
-   TUM Professor der uns helfen kann --> welche professor an der TUM kann uns helfen ?
+   TUM Professor der uns helfen kann --> welche professor an der TUM kann uns helfen?   ->
 
 
 ################################################
