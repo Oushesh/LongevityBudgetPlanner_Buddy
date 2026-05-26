@@ -34,9 +34,9 @@
     https://www.ycombinator.com/launches/QLz-astraea-agents-accelerating-clinical-trials
 
 ## Contact Points: 
-   Daniel Sattl --> For Regulation of the medtech companies.
+   Daniel Sattl --> For Regulation of the medtech companies. (sent) waiting for feedback
  
-   Which 5 person should I speak to? 
+   Which 5 person should I speak to? sent to Lukas Wiesmeier (waiting for feedback)
 
    Contact Persons: Leap-Up Contact point 1h kostenlose beratung.
 
@@ -79,6 +79,8 @@
     We automate hardware certification for medical devices. 
 
     --> Cutting Compliance hours for teams 50x.
+
+
 
     
 
