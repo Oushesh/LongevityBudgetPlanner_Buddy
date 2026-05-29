@@ -12,4 +12,4 @@ Contact Points:
 
    * Prof. Dr. Florian Matthes
 
-   * Prof. Dr. 
+   * Prof. Dr. FLorian Matthes

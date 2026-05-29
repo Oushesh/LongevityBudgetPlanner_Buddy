@@ -136,7 +136,7 @@
 
 
 ## Questionnaire: 
-   1. (Sent) Daniel Sattl Interview
+   1. (Sent) Daniel Sattl Interview (SENT)
    2. (To DO) Lukas Wiesmeier: Angsa Robotics --> which innovativ Robotics Company 
    do we have in Munich? 
 
@@ -149,10 +149,18 @@
    6. ReActive Robotics GmbH 
    7. Neura Robotics GmbH 
       
-   8. Ask: Rafael --> for Longevity
+   8. Ask: Rafael --> for Longevity, robotics and medtech. 
    9. Ask: https://neura-robotics.com/ --> 
    10. Franka Emika: Test Robotics. 
-   11.  
+   11.  Sören Gunia (Sent --> Askign letter for problems related to medtech software)
+        
+   12. Dr. Patrick Van der Smagt --> Robotics Professor (SENT)
+   13.
+
+   14. Blue Book and how to read the stuffs. (Read on that shit)
+
+   15. Talk to Luis Hopf 
+
 
    TUM Professor der uns helfen kann --> welche professor an der TUM kann uns helfen?   ->
 
