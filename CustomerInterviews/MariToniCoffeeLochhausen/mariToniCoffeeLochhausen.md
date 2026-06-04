@@ -25,7 +25,7 @@
 
    <Export the Newsletter here with Ina20 Code>
 
-   Newsletter where he can sign in and 
-
+   Newsletter where he can sign in and buy the supplements
+   Give him the GetSolio one Oliv Oil
 
 ## Write a Steps on how 

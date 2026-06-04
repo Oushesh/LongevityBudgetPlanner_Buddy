@@ -25,4 +25,11 @@
 ## Feature Number 3:
    
    
+## Example Corato Oliv Oil:
+   https://www.sunday.de/en/olive-oil-high-quality-polyphenol-extra-virgin-puglia.html
+
+   Compare this with: Green Machine from olvlimits and GetSolio --> all of those also the ones from sunday naturals come from Apuglia.
+
+   Newsletter comparing: olvLimits, Green Machine or Sunday Naturals high Polyphenols oliv oil
+
    
