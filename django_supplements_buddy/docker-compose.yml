@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: supplements
+      POSTGRES_PASSWORD: supplements
+      POSTGRES_DB: supplements_buddy
+    volumes:
+      - supplements_pgdata:/var/lib/postgresql/data
+
+volumes:
+  supplements_pgdata:
