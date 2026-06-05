@@ -40,9 +40,3 @@ Frontend: [frontend_hardware_compliance](../frontend_hardware_compliance) on por
 uv run python manage.py test
 ```
 
-## Tests for Supplement Review and Supplement Advise: 
-
-```bash
-cd django_supplements_buddy
-uv run python manage.py test coa.tests.test_api -v 2
-```

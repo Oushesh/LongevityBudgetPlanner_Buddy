@@ -88,3 +88,11 @@ const res = await fetch("/api/compare/", {
 });
 const { products, chart } = await res.json();
 ```
+
+
+## Tests for Supplement Review and Supplement Advise: 
+
+```bash
+cd django_supplements_buddy
+uv run python manage.py test coa.tests.test_api -v 2
+```
