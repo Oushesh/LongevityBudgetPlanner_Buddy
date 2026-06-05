@@ -30,6 +30,15 @@ uv run python manage.py seed_olive_oil
 uv run python manage.py runserver 8001
 ```
 
+## Tests
+
+Run the API integration tests first — they seed demo data, hit every endpoint, and assert the compare chart payload shape (no Postgres required):
+
+```bash
+cd django_supplements_buddy
+uv run python manage.py test coa.tests.test_api -v 2
+```
+
 ## API
 
 | Method | Path | Description |

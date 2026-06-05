@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 
 import environ
@@ -69,9 +70,17 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": env.db(
-        default=f"postgres://supplements:supplements@127.0.0.1:5432/supplements_buddy"
+        default="postgres://supplements:supplements@127.0.0.1:5432/supplements_buddy"
     )
 }
+
+if "test" in sys.argv:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": ":memory:",
+        }
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
