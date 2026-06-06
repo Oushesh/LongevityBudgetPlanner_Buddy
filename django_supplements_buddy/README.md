@@ -96,3 +96,23 @@ const { products, chart } = await res.json();
 cd django_supplements_buddy
 uv run python manage.py test coa.tests.test_api -v 2
 ```
+
+
+## APIs
+   According to my survey: Health Research, Journeys and Berberine for Cardiovascular is needed.
+   User Stories from my father: 
+   Add Andiogram
+   Add the Knoblauch supplements --> https://www.sunday.de/schwarzer-knoblauch-extrakt-fermentiert.html?klar_source=google&klar_cpid=19777094632&utm_campaign=DE_NEM_PLA_GE_PerformanceMax_Top&utm_id=727-064-9109_id2:19777094632_id3:&gad_source=1&gad_campaignid=19776347408&gbraid=0AAAAACoe3s9XvQNSrzqcLD7kuLCEaxx1d&gclid=Cj0KCQjwio_RBhDMARIsAJPveNMBoVXSi0F10qnvpbGfclzKc0uUqWAwTumW6W5HohkgDxekgoGaInQaAviDEALw_wcB
+
+
+   User Journey: -> Similar profiles --> similar expected results
+
+   In the future Agent Backed research and approved and also insurance
+
+
+  
+   Tested User stories
+
+   Oliv Oil: user backed research: 
+
+   quantify the pain: How much time do users wait at checkout to finish the purchase?? 
