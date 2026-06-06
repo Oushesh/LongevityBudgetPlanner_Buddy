@@ -154,8 +154,8 @@
    10. Franka Emika: Test Robotics. 
    11.  Sören Gunia (Sent --> Askign letter for problems related to medtech software)
         
-   12. Dr. Patrick Van der Smagt --> Robotics Professor (SENT)
-   13.
+   12. Dr. Patrick Van der Smagt --> Robotics Professor (SENT) 
+   13. 
 
    14. Blue Book and how to read the stuffs. (Read on that shit)
 
