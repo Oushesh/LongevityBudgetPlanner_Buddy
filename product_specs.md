@@ -159,12 +159,10 @@
 
    14. Blue Book and how to read the stuffs. (Read on that shit)
 
-   15. Talk to Luis Hopf 
+   15. Talk to Luis Hopf (send message now) --> 
 
 
    TUM Professor der uns helfen kann --> welche professor an der TUM kann uns helfen?   ->
-
-
 ################################################
 
 ###############################################
