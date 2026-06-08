@@ -1,2 +1,3 @@
 corepack/*
 .cursor/*
+ .pnpm-store/*
