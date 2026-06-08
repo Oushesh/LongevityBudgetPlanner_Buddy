@@ -111,8 +111,6 @@ uv run python manage.py test coa.tests.test_api -v 2
 
   In the future Agent Backed research and approved and also insurance
 
-
-  
   Tested User stories
 
    Oliv Oil: user backed research: 
@@ -130,4 +128,11 @@ uv run python manage.py test coa.tests.test_api -v 2
 
    User Journey: <get the video from the doctor get it sorted out and fix the problem>
 
+   Video --> Review Video --> Talk with the doctor --> Get the info from there --> and his advice 
+  --> Embed this advice as a Newsletter for investors.
+   <Protocol from Google Docs>
+
+   <Get the evidence from the doctor> --> Review Video --> Get Course of action like for my father.
+   --> Get a second opinion from a cardiologist in Germany.
    
+
