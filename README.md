@@ -9,6 +9,8 @@ high-value health and longevity interventions.
 - `frontend/`: Next.js demo UI (auth, budget form, catalog table, plan, coach).
 - `django_hardware_compliance/`: Hardware compliance API (port **8001**) — Fuchsia-style workflow.
 - `frontend_hardware_compliance/`: Compliance UI (port **3001**) — standards, docs, labs, timeline.
+- `django_supplements_buddy/`: COA / TrustScore API for supplement & olive-oil brand reviews (port **8001**).
+- `frontend_supplements_buddy/`: **Labdoor-style** review UI — TrustScore, key data table, buying options (port **3000**).
 - `rust/`: reserved folder for future performance-critical planning components.
 
 ## Hardware compliance MVP
@@ -25,6 +27,90 @@ cd frontend_hardware_compliance && pnpm install && pnpm dev
 ```
 
 Demo user: `demo` / `demo-password-change-me`
+
+## Supplements Buddy — Labdoor-style reviews
+
+TrustScore + COA breakdown UI (like [Labdoor](https://labdoor.com/)) for supplements and olive oil. Full details: [frontend_supplements_buddy/README.md](frontend_supplements_buddy/README.md) and [django_supplements_buddy/README.md](django_supplements_buddy/README.md).
+
+### Fastest way to see the page (no API)
+
+```bash
+corepack enable   # one-time
+cd frontend_supplements_buddy
+cp .env.example .env.local
+pnpm install
+pnpm dev
+```
+
+Open these in your browser:
+
+| What | URL |
+|------|-----|
+| **Labdoor-style demo** (static Omapure review) | [http://localhost:3000/review/demo/omapure-omega-3-fish-oil](http://localhost:3000/review/demo/omapure-omega-3-fish-oil) |
+| Home + search | [http://localhost:3000](http://localhost:3000) |
+| Compare chart | [http://localhost:3000/compare](http://localhost:3000/compare) |
+
+The demo review shows **TrustScore**, **Key Data** (Found / Claimed / Limit), **Certifications**, category score bars, and **Buying Options** — same layout pattern as Labdoor product pages.
+
+### Full stack (live olive-oil data from API)
+
+```bash
+# Terminal 1 — API on :8001
+cd django_supplements_buddy
+cp .env.example .env
+docker compose up -d          # Postgres, or set DATABASE_URL in .env
+uv sync
+uv run python manage.py migrate
+uv run python manage.py seed_olive_oil
+uv run python manage.py runserver 8001
+
+# Terminal 2 — UI on :3000
+cd frontend_supplements_buddy
+cp .env.example .env.local    # NEXT_PUBLIC_API_URL=http://127.0.0.1:8001
+pnpm install
+pnpm dev
+```
+
+Example live review URLs:
+
+- [http://localhost:3000/review/olvlimits/extra-virgin-polyphenol-rich](http://localhost:3000/review/olvlimits/extra-virgin-polyphenol-rich)
+- [http://localhost:3000/review/getsoloio/daily-dose-evoo](http://localhost:3000/review/getsoloio/daily-dose-evoo)
+- [http://localhost:3000/review/blueprint/extra-virgin-olive-oil](http://localhost:3000/review/blueprint/extra-virgin-olive-oil)
+
+### Frontend E2E tests (Playwright)
+
+Smoke tests start the dev server automatically. **Demo tests do not need Django.**
+
+```bash
+cd frontend_supplements_buddy
+pnpm install
+pnpm exec playwright install chromium   # first time only
+pnpm test:e2e
+```
+
+| Test file | What it checks |
+|-----------|----------------|
+| `e2e/review-demo.spec.ts` | Omapure demo page — TrustScore 96.6, KEY DATA, BUYING OPTIONS |
+| `e2e/api-integration.spec.ts` | Olive-oil reviews + compare (skipped if API on `:8001` is down) |
+
+Run **all** tests (including API integration):
+
+```bash
+# terminal 1
+cd django_supplements_buddy && uv run python manage.py runserver 8001
+
+# terminal 2
+cd frontend_supplements_buddy && pnpm test:e2e
+```
+
+Interactive debug UI: `pnpm test:e2e:ui`
+
+Backend API tests only:
+
+```bash
+cd django_supplements_buddy
+uv run python manage.py test coa.tests.test_api -v 2
+```
 
 ## How the budget planner works (user journey)
 
