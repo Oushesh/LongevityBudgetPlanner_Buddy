@@ -49,11 +49,38 @@ Each review page includes:
 - **Category scores** — five COA dimensions as progress bars
 - **Buying Options** — official site + Amazon search CTA
 
+## E2E tests (fast smoke check)
+
+Runs Playwright against the dev server — **demo tests need no Django API**:
+
+```bash
+cd frontend_supplements_buddy
+pnpm install
+pnpm exec playwright install chromium   # first time only
+pnpm test:e2e
+```
+
+What it checks:
+- **review-demo** — Omapure page shows TrustScore 96.6, KEY DATA, BUYING OPTIONS
+- **api-integration** — olive oil reviews + compare (skipped automatically if API is down)
+
+With Django running on `:8001`, all tests run:
+
+```bash
+# terminal 1
+cd django_supplements_buddy && uv run python manage.py runserver 8001
+
+# terminal 2
+cd frontend_supplements_buddy && pnpm test:e2e
+```
+
 ## Scripts
 
 ```bash
-pnpm dev      # development server
-pnpm build    # production build
-pnpm start    # run production build
-pnpm lint     # ESLint
+pnpm dev          # development server
+pnpm build        # production build
+pnpm start        # run production build
+pnpm lint         # ESLint
+pnpm test:e2e     # Playwright smoke tests
+pnpm test:e2e:ui  # Playwright interactive UI
 ```
