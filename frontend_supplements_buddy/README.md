@@ -22,6 +22,25 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+### No API? Start here
+
+With only the frontend running, the home page shows a **centered Omapure demo card** under Featured reviews:
+
+![Featured reviews — single demo card centered on the home page](docs/screenshots/home-featured-reviews.png)
+
+Open the Labdoor-style review (TrustScore, Key Data, Certifications, Buying Options):
+
+![Omapure Omega-3 demo review page](docs/screenshots/review-omapure-demo.png)
+
+Direct link: [http://localhost:3000/review/demo/omapure-omega-3-fish-oil](http://localhost:3000/review/demo/omapure-omega-3-fish-oil)
+
+Regenerate screenshots after UI changes:
+
+```bash
+pnpm dev   # terminal 1
+node scripts/capture-readme-screenshots.mjs   # terminal 2
+```
+
 ## Pages
 
 | Route | Description |

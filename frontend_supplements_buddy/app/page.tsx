@@ -17,6 +17,7 @@ export default async function HomePage() {
   );
 
   const available = reviews.filter((r) => r.product);
+  const featuredCount = 1 + available.length;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -54,7 +55,13 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+        <div
+          className={
+            featuredCount === 1
+              ? "mx-auto flex max-w-sm justify-center"
+              : "grid gap-6 sm:grid-cols-2 xl:grid-cols-4"
+          }
+        >
           <FeaturedReviewCard
             href="/review/demo/omapure-omega-3-fish-oil"
             brandName="Omapure"
