@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <rect width="200" height="280" fill="#fffbeb"/>
+  <ellipse cx="100" cy="248" rx="48" ry="9" fill="#fde68a" opacity="0.5"/>
+  <path d="M78 58c0-8 10-14 22-14s22 6 22 14v18H78V58z" fill="#166534"/>
+  <path d="M70 76h60c6 0 10 4 10 10v130c0 8-6 14-14 14H74c-8 0-14-6-14-14V86c0-6 4-10 10-10z" fill="#fff" stroke="#d97706" stroke-width="2"/>
+  <ellipse cx="100" cy="150" rx="22" ry="30" fill="#f59e0b" opacity="0.25"/>
+  <text x="100" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#92400e">OLVLIMITS</text>
+  <text x="100" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#b45309">Extra Virgin</text>
+</svg>
