@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <rect width="200" height="280" fill="#f8fafc"/>
+  <ellipse cx="100" cy="248" rx="48" ry="9" fill="#e2e8f0"/>
+  <rect x="74" y="46" width="52" height="18" rx="3" fill="#0f172a"/>
+  <path d="M70 64h60c8 0 14 6 14 14v136c0 10-8 18-18 18H74c-10 0-18-8-18-18V78c0-8 6-14 14-14z" fill="#fff" stroke="#334155" stroke-width="2"/>
+  <text x="100" y="132" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#0f172a">BLUEPRINT</text>
+  <text x="100" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#64748b">Bryan Johnson</text>
+  <text x="100" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#ca8a04">Olive Oil</text>
+</svg>
