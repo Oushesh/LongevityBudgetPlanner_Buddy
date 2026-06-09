@@ -48,9 +48,30 @@ Open these in your browser:
 |------|-----|
 | **Labdoor-style demo** (static Omapure review) | [http://localhost:3000/review/demo/omapure-omega-3-fish-oil](http://localhost:3000/review/demo/omapure-omega-3-fish-oil) |
 | Home + search | [http://localhost:3000](http://localhost:3000) |
-| Compare chart | [http://localhost:3000/compare](http://localhost:3000/compare) |
+| **Compare 2 products side by side** (omega-6 demo) | [http://localhost:3000/compare/side-by-side](http://localhost:3000/compare/side-by-side) |
+| Compare chart (olive oil) | [http://localhost:3000/compare](http://localhost:3000/compare) |
 
 The demo review shows **TrustScore**, **Key Data** (Found / Claimed / Limit), **Certifications**, category score bars, and **Buying Options** — same layout pattern as Labdoor product pages.
+
+### Compare two omega-6 supplements side by side
+
+Works **without the API** using demo COA data:
+
+| Product | TrustScore |
+|---------|------------|
+| Sunday Naturals Omega-6 GLA | 84.2 / 100 |
+| NutraVita Evening Primrose Omega-6 | 78.8 / 100 |
+
+**One-click demo:** [Sunday Naturals vs NutraVita](http://localhost:3000/compare/side-by-side?a=demo/demo/sunday-naturals-omega-6&b=demo/demo/nutravita-evening-primrose-omega-6)
+
+**Steps:**
+
+1. Run `pnpm dev` in `frontend_supplements_buddy`.
+2. Open **Compare** in the header → `/compare/side-by-side`.
+3. Search **Sunday Naturals** in Product A and **NutraVita** in Product B.
+4. Click **Compare side by side** — TrustScores and key data appear in two columns plus a shared analyte table.
+
+More detail: [frontend_supplements_buddy/README.md](frontend_supplements_buddy/README.md#compare-2-products-side-by-side-omega-6).
 
 ### Full stack (live olive-oil data from API)
 
@@ -91,6 +112,7 @@ pnpm test:e2e
 | Test file | What it checks |
 |-----------|----------------|
 | `e2e/review-demo.spec.ts` | Omapure demo page — TrustScore 96.6, KEY DATA, BUYING OPTIONS |
+| `e2e/side-by-side-compare.spec.ts` | Omega-6 side-by-side demo (Sunday Naturals vs NutraVita, no API) |
 | `e2e/api-integration.spec.ts` | Olive-oil reviews + compare (skipped if API on `:8001` is down) |
 
 Run **all** tests (including API integration):
@@ -246,4 +268,7 @@ Notes:
    TBD.
    
 
-## 
+## Features to develop: 
+   Add frontend features where, we compare the 2 stuffs 2 supplements
+
+   

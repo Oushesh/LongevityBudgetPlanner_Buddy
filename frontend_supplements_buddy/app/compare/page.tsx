@@ -25,6 +25,16 @@ export default async function ComparePage({ searchParams }: PageProps) {
         category scores.
       </p>
 
+      <div className="mt-6 rounded-lg border border-[#1a6fd1]/30 bg-blue-50/50 p-4 text-sm text-slate-700">
+        Compare two omega-6 products side by side with dual search bars:{" "}
+        <Link
+          href="/compare/side-by-side"
+          className="font-semibold text-[#1a6fd1] hover:underline"
+        >
+          Side-by-side compare →
+        </Link>
+      </div>
+
       <div className="mt-8">
         <BrandSearch />
       </div>

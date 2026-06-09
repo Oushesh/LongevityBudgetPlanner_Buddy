@@ -14,6 +14,11 @@ type KeyDataRow = {
 
 const KEY_DATA_META: Record<string, { claimed: string; limit: string }> = {
   total_omega3: { claimed: "1,000 mg", limit: "≥ 95% of label" },
+  total_omega6: { claimed: "900 mg", limit: "≥ 95% of label" },
+  gla: { claimed: "150 mg", limit: "≥ 95% of label" },
+  linoleic_acid: { claimed: "600 mg", limit: "≥ 95% of label" },
+  omega6_per_serving: { claimed: "900 mg", limit: "≥ label claim" },
+  pcb_count: { claimed: "0", limit: "0 hits" },
   epa: { claimed: "600 mg", limit: "≥ 95% of label" },
   dha: { claimed: "400 mg", limit: "≥ 95% of label" },
   polyphenols_mg_kg: { claimed: "800 mg/kg", limit: "≥ 500 mg/kg" },

@@ -48,10 +48,10 @@ export default async function HomePage() {
             </p>
           </div>
           <Link
-            href="/compare"
+            href="/compare/side-by-side"
             className="text-sm font-medium text-[#1a6fd1] hover:underline"
           >
-            Compare olive oil →
+            Compare 2 products →
           </Link>
         </div>
 

@@ -41,13 +41,59 @@ pnpm dev   # terminal 1
 node scripts/capture-readme-screenshots.mjs   # terminal 2
 ```
 
+## Compare 2 products side by side (omega-6)
+
+Pick two supplements from search bars and view TrustScores and COA key data **next to each other** — Labdoor-style.
+
+### Quick start (no API)
+
+```bash
+cd frontend_supplements_buddy
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000/compare/side-by-side](http://localhost:3000/compare/side-by-side).
+
+### One-click demo example
+
+| Product | TrustScore |
+|---------|------------|
+| Sunday Naturals Omega-6 GLA | 84.2 / 100 |
+| NutraVita Evening Primrose Omega-6 | 78.8 / 100 |
+
+**Direct link (both products loaded):**
+
+[http://localhost:3000/compare/side-by-side?a=demo/demo/sunday-naturals-omega-6&b=demo/demo/nutravita-evening-primrose-omega-6](http://localhost:3000/compare/side-by-side?a=demo/demo/sunday-naturals-omega-6&b=demo/demo/nutravita-evening-primrose-omega-6)
+
+### Step by step
+
+1. Go to **Compare** in the header (or `/compare/side-by-side`).
+2. In **Product A**, search `Sunday Naturals` and select *Sunday Naturals — Sunday Naturals Omega-6 GLA*.
+3. In **Product B**, search `NutraVita` and select *NutraVita — NutraVita Evening Primrose Omega-6*.
+4. Click **Compare side by side**.
+
+You get:
+
+- Two columns with product image, TrustScore, and category score bars
+- A **KEY DATA — SIDE BY SIDE** table (e.g. Total Omega-6, GLA, mercury) aligned row by row
+- Links to each product’s full review page
+
+Individual demo reviews:
+
+- [http://localhost:3000/review/demo/sunday-naturals-omega-6](http://localhost:3000/review/demo/sunday-naturals-omega-6)
+- [http://localhost:3000/review/demo/nutravita-evening-primrose-omega-6](http://localhost:3000/review/demo/nutravita-evening-primrose-omega-6)
+
+Olive oil brands from the API also appear in search when Django runs on `:8001`.
+
 ## Pages
 
 | Route | Description |
 |-------|-------------|
 | `/` | Featured reviews + brand search |
 | `/review/[brand]/[product]` | Labdoor-style review (score, key data, buying options) |
-| `/compare` | Multi-brand TrustScore comparison chart |
+| `/compare/side-by-side` | **Dual search** — compare 2 products side by side (omega-6 demo) |
+| `/compare` | Multi-brand TrustScore comparison chart (olive oil) |
 
 ### Example review URLs
 
@@ -81,6 +127,7 @@ pnpm test:e2e
 
 What it checks:
 - **review-demo** — Omapure page shows TrustScore 96.6, KEY DATA, BUYING OPTIONS
+- **side-by-side-compare** — Sunday Naturals vs NutraVita omega-6 demo (no API)
 - **api-integration** — olive oil reviews + compare (skipped automatically if API is down)
 
 With Django running on `:8001`, all tests run:

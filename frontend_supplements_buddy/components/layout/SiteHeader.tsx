@@ -11,7 +11,10 @@ export function SiteHeader() {
           <Link href="/" className="opacity-90 hover:opacity-100">
             Reviews
           </Link>
-          <Link href="/compare" className="opacity-90 hover:opacity-100">
+          <Link
+            href="/compare/side-by-side"
+            className="opacity-90 hover:opacity-100"
+          >
             Compare
           </Link>
         </nav>

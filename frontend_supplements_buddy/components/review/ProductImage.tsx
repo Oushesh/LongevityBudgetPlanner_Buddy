@@ -22,7 +22,12 @@ export function ProductImage({ src, alt, category = "supplement" }: ProductImage
     );
   }
 
-  const label = category === "omega_3" ? "Omega-3" : "EVOO";
+  const label =
+    category === "omega_3"
+      ? "Omega-3"
+      : category === "omega_6"
+        ? "Omega-6"
+        : "EVOO";
 
   return (
     <div className="flex h-40 w-40 shrink-0 flex-col items-center justify-center rounded-lg border border-slate-200 bg-slate-50">
