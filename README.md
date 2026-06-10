@@ -269,6 +269,16 @@ Notes:
    
 
 ## Features to develop: 
-   Add frontend features where, we compare the 2 stuffs 2 supplements
+   <Add frontend features where, we compare the 2 stuffs 2 supplements>
 
-   
+
+```
+   Most of the really good longevity products in Case 1: 
+   Extra Virgin Oliv Oil have the least amount of exposure online
+   Specially as buyers move more from typical Search Engine like Google Search towards
+   a more Agentic AI Search most of the products even provided by Gemini or Claude dont
+   appear in the list. So users miss it and companies (the new ones lose visibility, traffic and 
+   potentially really good customers)
+```
+
+## 
