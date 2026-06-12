@@ -19,22 +19,25 @@
 
 
 ## ICP: Ideal Customer Profle: 
+   Stefan Zipperer --> https://www.linkedin.com/in/stefan-zipperer-stayhealthy/?originalSubdomain=de
+
    Daniyal Shahrokhian -- Product Manager
 
    Customer Understanding: Is he a morning or evening person? 
 
-   Eating Habits? 
-   Sleeping Habits? 
+   Eating Habits? --> Intermittent Fasting
+   Sleeping Habits? --> 
 
 
    Alexander Kliotzkin -- Engineering Manager/Director 
    
    
-   
+   Stefan Zipperer --> Sent Linkedin Connection request --> Get contact for interview 
+
+
    Infineon --> 
    
    Did you ever use Sleeping Pod? Or whats your wind down protocol
-
 
    Core Problem to solve: "Solve the 1500 3pm  Crash in the afternoon"
 
@@ -156,6 +159,44 @@
 
    KI --> Beschleuniger (acceleration)
    
-   
-   
-   
+
+## Key Feature: 
+   --> Stop Crashing at 3pm.
+   That afternoon wall isn't about coffee or willpower. It often comes down to how your body handles: 
+
+   1. Sugar
+   2. Stores Iron
+   3. Or produces thyroid hormones.
+
+
+
+   Stop Crashing at 3 pm. We have a promise and we have to deliver on that promise.
+
+   Formula: Nutrition Plan 
+   09:00
+
+
+
+   Step 1: Share your context
+   Step 2: Connect your wearables
+           --> We can help you buy your wearables
+
+   Step 3: Get Tested, twice a year
+   Step 4: Understand your results.
+           Each body system score and explained.
+
+   Step 5: Know exactly what to do next.
+
+
+   How was the experience between different labs worldwide? 
+   Best Digital and Physical Experience
+
+
+   Lucis.life --> Healthy Tomorrow starts with the habits you build today. 
+
+   <Eigen> your health companion, helping you build today. 
+
+   "Lucis is your health companion, helping you deeply understand your biology and take action to improve it"
+
+
+    
