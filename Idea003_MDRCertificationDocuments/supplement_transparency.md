@@ -9,7 +9,7 @@
 
 
 ## Feature Number 2: 
-   Case Studies: --> Put my father on Flavonoids 
+   Case Studies: --> Put my father on Flavonoids  (cocoa)
 
    So for every --> chocolate brand you have --> 
    Answer the decision of why you should be buying this supplement. 
