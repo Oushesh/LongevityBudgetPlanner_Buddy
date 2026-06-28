@@ -2,7 +2,6 @@
    Daniel Kaiser.md 
    Relationship: Colleague from MPXM
 
-
    Role: Engineering Leader and Solution Architect.
 
    Focus: Problem:
@@ -22,4 +21,4 @@
 
    # Interview Questions – Employee Energy Optimization
 
-   # 
+   ## 
