@@ -100,4 +100,11 @@ I will pay for the tests below:
 
 End of June --> Measure all those biomarkers --> hs-CRP, Fasting Insulin HbA1c, Fibrinogen and see.
 
-Aware HQ --> Fibrinogen 
+Aware HQ --> Fibrinogen measurement available in Germany for the cheapest.
+
+
+## Feature Development: 
+   1. GDPR for Development. (Privacy by Design)
+   2. ISO 27001 Compliance
+   3. HIPAA Compliance   
+
