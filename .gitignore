@@ -1,3 +1,5 @@
 corepack/*
 .cursor/*
 .pnpm-store/
+
+trustscore-app/*
