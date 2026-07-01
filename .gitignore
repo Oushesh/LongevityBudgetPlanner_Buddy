@@ -3,3 +3,4 @@ corepack/*
 .pnpm-store/
 
 trustscore-app/*
+google-cloud-sdk/*
