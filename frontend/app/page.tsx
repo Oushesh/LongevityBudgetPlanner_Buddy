@@ -1,94 +1,117 @@
 import Link from "next/link";
+import { Phone, MapPin, Droplet, User, Bell, ChevronRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-full max-w-3xl flex-col gap-10 px-4 py-20">
+    <div className="mx-auto flex min-h-full max-w-3xl flex-col gap-10 px-4 py-16 text-zinc-900 font-sans">
+      {/* Hero Header */}
       <div>
-        <p className="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
-          LongevityBudgetPlanner Buddy
+        <p className="text-sm font-bold uppercase tracking-widest text-blue-700">
+          LongevityBuddy Demo
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Plan what to spend on healthspan — with transparent scoring.
+        <h1 className="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
+          Interact with your Longevity App Mockups.
         </h1>
-        <p className="mt-4 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-          The Django API turns your monthly budget and goals into ranked
-          protocols and supplements using{" "}
-          <strong className="text-zinc-900 dark:text-zinc-100">
-            purity, trust, bioavailability
-          </strong>
-          , and formulation quality per euro. The demo Next.js app walks through
-          registration → profile → catalog → generated plan → coach tips.
+        <p className="mt-4 text-lg leading-relaxed text-zinc-600">
+          We have reconstructed the screen designs from your mockup screenshots as fully interactive Next.js pages. Explore the views below inside a simulated premium mobile app container.
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-4">
-        <Link
-          href="/register"
-          className="rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900"
-        >
-          Get started
-        </Link>
-        <Link
-          href="/login"
-          className="rounded-md border border-zinc-300 px-5 py-2.5 text-sm font-medium dark:border-zinc-600"
-        >
-          Sign in
-        </Link>
-        <Link
-          href="/plan"
-          className="rounded-md px-5 py-2.5 text-sm font-medium text-emerald-800 underline dark:text-emerald-400"
-        >
-          Open planner
-        </Link>
-      </div>
-
-      <section className="rounded-xl border border-zinc-200 bg-zinc-50/80 p-6 text-sm dark:border-zinc-800 dark:bg-zinc-900/50">
-        <h2 className="font-semibold text-zinc-900 dark:text-zinc-100">
-          How it works (user journey)
+      {/* Interactive Mockups Selector */}
+      <section className="flex flex-col gap-4">
+        <h2 className="text-lg font-bold tracking-tight text-zinc-800 flex items-center gap-2">
+          <Phone className="h-5 w-5 text-blue-600" />
+          Interactive Screens
         </h2>
-        <ol className="mt-4 list-decimal space-y-2 pl-5 text-zinc-700 dark:text-zinc-300">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          
+          {/* Analyse Link */}
+          <Link
+            href="/analyse"
+            className="group flex items-center justify-between rounded-3xl border border-zinc-200 bg-white p-5 shadow-xs hover:border-blue-300 hover:shadow-md transition-all duration-200"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 group-hover:scale-105 transition-transform">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-sm text-zinc-950">Location Analysis</span>
+                <span className="text-[11px] text-zinc-400 font-semibold uppercase mt-0.5">/analyse</span>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-zinc-300 group-hover:text-blue-600 transition-colors" />
+          </Link>
+
+          {/* Water Link */}
+          <Link
+            href="/water"
+            className="group flex items-center justify-between rounded-3xl border border-zinc-200 bg-white p-5 shadow-xs hover:border-emerald-300 hover:shadow-md transition-all duration-200"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 group-hover:scale-105 transition-transform">
+                <Droplet className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-sm text-zinc-950">Top Rated Catalog</span>
+                <span className="text-[11px] text-zinc-400 font-semibold uppercase mt-0.5">/water</span>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-zinc-300 group-hover:text-emerald-600 transition-colors" />
+          </Link>
+
+          {/* Profile Link */}
+          <Link
+            href="/profile"
+            className="group flex items-center justify-between rounded-3xl border border-zinc-200 bg-white p-5 shadow-xs hover:border-amber-300 hover:shadow-md transition-all duration-200"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 group-hover:scale-105 transition-transform">
+                <User className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-sm text-zinc-950">Health Score Profile</span>
+                <span className="text-[11px] text-zinc-400 font-semibold uppercase mt-0.5">/profile</span>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-zinc-300 group-hover:text-amber-600 transition-colors" />
+          </Link>
+
+          {/* Alerts Link */}
+          <Link
+            href="/alerts"
+            className="group flex items-center justify-between rounded-3xl border border-zinc-200 bg-white p-5 shadow-xs hover:border-rose-300 hover:shadow-md transition-all duration-200"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 text-rose-600 group-hover:scale-105 transition-transform">
+                <Bell className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-sm text-zinc-950">System Notifications</span>
+                <span className="text-[11px] text-zinc-400 font-semibold uppercase mt-0.5">/alerts</span>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-zinc-300 group-hover:text-rose-600 transition-colors" />
+          </Link>
+
+        </div>
+      </section>
+
+      {/* Features Overview */}
+      <section className="rounded-3xl border border-zinc-200 bg-white/70 p-6 text-sm backdrop-blur-xs shadow-xs">
+        <h2 className="font-bold text-zinc-950 text-base">
+          Interactive Design Specifications
+        </h2>
+        <ul className="mt-4 list-disc space-y-2.5 pl-5 text-zinc-600 font-medium">
           <li>
-            <strong>Account</strong> — JWT auth; your email matches the planner
-            profile on the API.
+            <strong>Contextual Synchronization</strong>: Adding/removing products inside categories in `/water` dynamically updates the global health score, toxins, benefits, and risks on the `/profile` view.
           </li>
           <li>
-            <strong>Goals & budget</strong> — disposable income, caps, insurance
-            (GKV/PKV), and goals like sleep or diagnostics.
+            <strong>Location-Based AQI</strong>: Toggling between Santa Monica, CA, Munich, Germany, and Berlin, Germany on `/analyse` modifies the quality scores, status indicators, and detailed air/water pollutant levels.
           </li>
           <li>
-            <strong>Catalog</strong> — optional table of interventions with
-            scores you can compare before committing.
+            <strong>Settings Cog</strong>: Accessible on `/profile`, allowing custom alert preferences and layout controls.
           </li>
-          <li>
-            <strong>Plan</strong> — deterministic allocation by scenario
-            (conservative / balanced / aggressive), ranked by value vs monthly
-            cost.
-          </li>
-          <li>
-            <strong>Coach</strong> — next-step guidance anchored to your plan
-            (extend with a real LLM later).
-          </li>
-        </ol>
-        <p className="mt-4 text-zinc-600 dark:text-zinc-500">
-          Run the API:{" "}
-          <code className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-zinc-950">
-            cd django && uv run python manage.py runserver
-          </code>
-          <br />
-          Run this UI:{" "}
-          <code className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-zinc-950">
-            cd frontend && pnpm dev
-          </code>{" "}
-          — set{" "}
-          <code className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-zinc-950">
-            NEXT_PUBLIC_API_URL
-          </code>{" "}
-          in{" "}
-          <code className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-zinc-950">
-            .env.local
-          </code>
-          .
-        </p>
+        </ul>
       </section>
     </div>
   );

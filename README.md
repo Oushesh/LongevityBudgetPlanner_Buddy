@@ -158,6 +158,16 @@ pnpm dev
 
 Run Django on port 8000 with CORS allowing `http://localhost:3000` (see `django/.env.example`).
 
+### Interactive Mobile Mockups Demo
+
+The frontend contains interactive, pixel-perfect reconstructions of mobile mockup designs from the `FEATURES/` folder:
+* **Location Analysis ([`/analyse`](frontend/app/analyse/page.tsx))**: Santa Monica quality monitoring dashboard (`AppReview001.webp`).
+* **Top Rated Catalog ([`/water`](frontend/app/water/page.tsx))**: Sage-green category grid (`AppOasis002.webp` / `AppOasis004.webp`) with custom SVG illustrations.
+* **Health Score Profile ([`/profile`](frontend/app/profile/page.tsx))**: Health score circular progress gauge and active products list (`AppOasis003.webp`).
+* **System Alerts ([`/alerts`](frontend/app/alerts/page.tsx))**: Contextual warnings for contaminants.
+
+For usage guidelines, see [frontend/README.md](frontend/README.md#interactive-mobile-mockups-demo).
+
 ## MVP Features (Implemented)
 
 - User/profile input capture with Germany-focused insurance support (`GKV` / `PKV`).

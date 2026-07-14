@@ -23,17 +23,14 @@
 
    Daniyal Shahrokhian -- Product Manager
 
-   Customer Understanding: Is he a morning or evening person? 
+   Customer Understanding: Is he a morning or an evening person? 
 
    Eating Habits? --> Intermittent Fasting
    Sleeping Habits? --> 
 
-
    Alexander Kliotzkin -- Engineering Manager/Director 
-   
-   
+      
    Stefan Zipperer --> Sent Linkedin Connection request --> Get contact for interview 
-
 
    Infineon --> 
    
@@ -45,10 +42,9 @@
 
    Problem: presenteeism --> being physically or digitally present but functionally unproductive. 
 
-   
+
 ## How do you test those habits? 
-   
-   Fix Circadian RythM and how easy to do that -->  
+   Fix Circadian Rythm and how easy to do that -->  
 
 ## Habit Pitch 
 
@@ -73,7 +69,6 @@
 ## Longevity Coach: 
    Jonas Schnirring --> 
    Maria or Isabella --> ask her 
-
 
    4000 EUR verdienen 
 

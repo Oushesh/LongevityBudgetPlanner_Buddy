@@ -20,5 +20,7 @@
    Experiment on the: waking up time and 
 
    # Interview Questions – Employee Energy Optimization
+      How can we understand their value for energy optimisation: ? 
 
-   ## 
+   ## DO I have energy crash at 1500 or how come? 
+      Talk to Daniel Kaiser about energy crash
