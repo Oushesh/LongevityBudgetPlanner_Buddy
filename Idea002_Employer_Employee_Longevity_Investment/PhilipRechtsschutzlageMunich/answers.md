@@ -88,6 +88,7 @@ OPTIONAL:
 
    Sleeping pod learns his habit within 10 days time.
    
+
 ## Next Target is: 
    Map the offer or product for the person.
    Its called pilot or beta for the product.
@@ -96,14 +97,39 @@ OPTIONAL:
 
 ## Extra Questions: Do you do sauna or ice plunge? 
    Sauna --> Infrarot Sauna in Munich --> 850 EUR paid price. --> sell the Sauna then.
-
-   Ice plunge --> How much does this cost --> 
+   Ice plunge --> How much does this cost -->
+    
    
 ## How does Sauna or Cold plunge affect energy levels down the day  for you? 
+   TODO: model and write a backend service on how to model energy level down the day.
 
    How    
 ## Reference to the paper: 
    https://arxiv.org/html/2605.00910v1#:~:text=Recent%20advances%20in%20wearable%20sensing%20enable%20continuous,one%20to%20two%20hours%20%5B19%2C%2018%5D%20.
+
+   --> Derivative and things needed down the line: 
+
+   N: 14 participants 
+   window cross-validation 
+
+   Estimation accuracy improves with increasing window length 
+
+   Max 8h of history. 
+
+   Tree-based models Accuracy --> 480 min to peak or best time
+
+   Sequence-based models continued to benefit from longer temporal contexts --> 
+
+   -> model accuracy of 1.19h (CMAE)
+   -> Circular Mean Aboslute Erro --> 1.19h --> 
+   --> CMAE --> Circular Mean absolute Error --> 
+
+   mean: min (theta_{hat}-theta-abs(theta-abs(theta)))
+
+   
+   Low latency circaadian phase estimation from wearable data under free-living conditions.
+
+   
 
 ## Reference to the paper: 
 
