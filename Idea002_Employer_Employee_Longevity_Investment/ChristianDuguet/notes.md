@@ -12,15 +12,11 @@
 
    Beneficial ingredients --> 6.
 
-
    Whats your routine ? 
-
 
    HFPO-DA (PFAS) --> HFPO-DA -- 
 
    For example: Acqua Panna Spring water --> Glass Bottle 
 
-
    Premium Waters and are they worth it? 
 
-   
