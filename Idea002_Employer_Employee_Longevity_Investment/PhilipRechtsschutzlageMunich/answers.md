@@ -121,11 +121,12 @@ OPTIONAL:
    Sequence-based models continued to benefit from longer temporal contexts --> 
 
    -> model accuracy of 1.19h (CMAE)
-   -> Circular Mean Aboslute Erro --> 1.19h --> 
+   -> Circular Mean Aboslute Error --> 1.19h --> Light estimation + physical activity estimation
+
    --> CMAE --> Circular Mean absolute Error --> 
 
-   mean: min (theta_{hat}-theta-abs(theta-abs(theta)))
 
+   mean: min (theta_{hat}-theta-abs(theta-abs(theta)))
    
    Low latency circaadian phase estimation from wearable data under free-living conditions.
 

@@ -31,21 +31,20 @@
    3. The Core Secret: The "Night Before"
       From a product logic perspective, Bryan Johnson frequently states that his morning energy is actually won the night before. 
 
-
       --> Sleep and all the sleep protocol is the best one here.
 
 ## Metabollic
    Stop crashing at 3 pm. --> solve this and raise money.
 
+## 
 
 ## Nervous System --> Sleep Better, 
-   (Use eight sleep pod) maybe? 
-
-   Sleep better, recover faster and handle more
+   (Use eight sleep pod) maybe? --> We know from people interview: the problem has been the price of that device.
+   Sleep better, recover faster and handle more 
 
 ## sex and Hormones 
    Get your mood, your cylces and your energy back.
-   --> Order L-Arginin
+   --> Order L-Arginin 
 
 ## Cardiovascular
    Measure your heart now. Not after an alert.
@@ -60,7 +59,6 @@
 
 
    Chronic low-grade inflammation doesn't show up in the mirror. It shows up in your joints, your energy, your skin, and how fast you age.
-
 
 
    We provide a Baseline of Biomarkers here first: 
@@ -84,8 +82,6 @@ Fasting Insulin
 HbA1c
 
 
-
-
 I will pay for the tests below: 
 
 | Position / Biomarker | GOÄ Code | Average Cost (1.15x Factor) | Premium App Platform (e.g., Aware) |
@@ -102,9 +98,14 @@ End of June --> Measure all those biomarkers --> hs-CRP, Fasting Insulin HbA1c, 
 
 Aware HQ --> Fibrinogen measurement available in Germany for the cheapest.
 
+Invest in tests of those particles and how much can you do them for? 
+
 
 ## Feature Development: 
    1. GDPR for Development. (Privacy by Design)
    2. ISO 27001 Compliance
    3. HIPAA Compliance   
 
+   Sleep: https://www.amazon.de/-/en/Wopigh-Daylight-Sunlight-Adjustable-Intensity/dp/B0CB38YH9V?th=1 --> Do we know how much does shining light on your face move the circadian rythm or correct ? 
+
+## 
