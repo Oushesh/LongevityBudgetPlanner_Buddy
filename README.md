@@ -11,7 +11,7 @@ high-value health and longevity interventions.
 - `frontend_hardware_compliance/`: Compliance UI (port **3001**) — standards, docs, labs, timeline.
 - `django_supplements_buddy/`: COA / TrustScore API for supplement & olive-oil brand reviews (port **8001**).
 - `frontend_supplements_buddy/`: **Labdoor-style** review UI — TrustScore, key data table, buying options (port **3000**).
-- `rust/`: reserved folder for future performance-critical planning components.
+- `rust/`: phone voice-agent runtime (issue 17) — pipeline, tools, latency; PhoneLLM stays on a GPU/Modal box.
 
 ## Hardware compliance MVP
 
@@ -274,8 +274,48 @@ Notes:
 ## Extra Feature 02: Longevity Physicians
    Talk to them: Call the Longevity Physicians in Germany.
 
+## Phone Voice Agent (issue 17)
+
+Branch: `17-add-phone-voice-agent-capabilities-to-the`  
+Issue: [Add Phone Voice Agent Capabilities](https://github.com/Oushesh/LongevityBudgetPlanner_Buddy/issues/17)
+
+A phone agent that can call or take a call (longevity physicians, intake, plan follow-up) and stay in the conversation: **low latency + reliable tool calling**, no “thinking” delay.
+
+### What we will build
+
+Work lives in `rust/`. Django stays the product API (profile, plan, catalog). The Rust service is the real-time voice loop.
+
+1. **Voice pipeline** — STT → PhoneLLM → TTS, plus turn-taking. Target voice-to-voice ~1,500ms; LLM time-to-first-token **200–350ms** natural, **P95 &lt; 600ms** including network.
+2. **PhoneLLM client** — [pipecat-ai/phonellm-alpha-1](https://huggingface.co/pipecat-ai/phonellm-alpha-1) (Nemotron 3 Nano 30B-A3B fine-tune). Settings: `temperature=0`, thinking **off**. Served by vLLM / SGLang, or Modal (`modal endpoint create --model pipecat-ai/phonellm-alpha-1`).
+3. **Tools** — call into the existing app: load plan, recommend next step, look up a product TrustScore, book / escalate a physician. Eval later with PhoneBench-style say/do checks.
+4. **Local smoke path** — Rust binary + a small stand-in LLM (or Modal) so you can develop the agent on a laptop without loading 30B weights.
+
+Latency (from the issue): total ≈ TTFT + 1/throughput, then add STT, TTS, and network.
+
+### Can I run the model locally?
+
+**The agent, yes. PhoneLLM on this laptop, no.**
+
+| Setup | Fits | Voice-latency target |
+| --- | --- | --- |
+| Official PhoneLLM (bf16, ~63 GB weights) | NVIDIA GPU / Modal B200 | Yes (P95 TTFT &lt; 600ms on B200) |
+| 4-bit Nemotron-class (~17 GB) | Apple Silicon with **24 GB+** unified memory | Dev only — TTFT often &gt; 1s |
+| **This Mac (M2, 8 GB)** | Not PhoneLLM | Run Rust locally; point it at Modal |
+
+Open weights mean you *can* self-host anywhere a 30B Nemotron-H model runs. Official recipes are vLLM / SGLang on NVIDIA, thinking disabled. There is no official PhoneLLM MLX/GGUF pack yet; community 4-bit Nemotron quants exist for the **base** model, not this fine-tune.
+
+Dev default: laptop runs the Rust agent; PhoneLLM runs on Modal (or any OpenAI-compatible vLLM URL).
+
+```bash
+# Production / real PhoneLLM (needs a GPU box or Modal)
+modal endpoint create --model pipecat-ai/phonellm-alpha-1
+
+# Later, from rust/
+# cargo run --bin voice-agent -- --llm-url "$PHONELLM_URL"
+```
+
 ## Connect the budget planner to the longevity Physician to the other ones. 
-   TBD.
+   The voice agent above is the call path. Planner + physician tools still TBD.
    
 
 ## Features to develop: 
