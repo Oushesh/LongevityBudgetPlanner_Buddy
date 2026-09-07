@@ -16,3 +16,6 @@
 ## Follow up with Sergey Voronov how he works on keeping his energy focus
 
    --> Get his interview and what he does.
+
+   Send also the form to sergey voronov and the QR Code.
+   
