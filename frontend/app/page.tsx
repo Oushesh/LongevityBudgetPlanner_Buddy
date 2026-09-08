@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, MapPin, Droplet, User, Bell, ChevronRight } from "lucide-react";
+import { Phone, MapPin, Droplet, User, Bell, ChevronRight, Moon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -91,6 +91,23 @@ export default function Home() {
               </div>
             </div>
             <ChevronRight className="h-5 w-5 text-zinc-300 group-hover:text-rose-600 transition-colors" />
+          </Link>
+
+          {/* Sleep Assessment Link */}
+          <Link
+            href="/assessment/sleep"
+            className="group flex items-center justify-between rounded-3xl border border-zinc-200 bg-white p-5 shadow-xs hover:border-indigo-300 hover:shadow-md transition-all duration-200 sm:col-span-2"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 group-hover:scale-105 transition-transform">
+                <Moon className="h-6 w-6" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-sm text-zinc-950">Sleep & Circadian Assessment</span>
+                <span className="text-[11px] text-zinc-400 font-semibold uppercase mt-0.5">/assessment/sleep</span>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-zinc-300 group-hover:text-indigo-600 transition-colors" />
           </Link>
 
         </div>
