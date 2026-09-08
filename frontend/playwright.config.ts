@@ -20,4 +20,10 @@ export default defineConfig({
         : { ...devices["Desktop Chrome"] },
     },
   ],
+  webServer: {
+    command: "pnpm dev",
+    url: process.env.E2E_BASE_URL ?? "http://127.0.0.1:3000",
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
+  },
 });
