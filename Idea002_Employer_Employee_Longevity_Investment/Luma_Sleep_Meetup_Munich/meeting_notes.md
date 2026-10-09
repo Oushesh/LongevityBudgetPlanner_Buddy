@@ -13,7 +13,7 @@
 
    ML 
 
-## Translation of the Research iNto Product Development: 
+## Translation of the Research into Product Development: 
    Can Entrainment be added to product development? 
 
    Zeitgebers --> stimuli that reliably recur each 24h, include light and numerous other predictable features of the environment stemmign from the light cycle (temperature, food)
@@ -22,16 +22,16 @@
 
    Ask her is it sufficient just to use sleep pod or should we use other ideas to make sleep entrainments? 
 
-
    <Read her research and derive some product features or software features>
 
    Entrainment be added to product development --> Which factors and how does it affect the things? 
 
-
    Dr. Borbala Blaskovic --> 
-
+   
 
 ## Meeting Notes from Borbala Blaskovic: 
+
+## Dr. Borbala Blaskovic: 
    
    
 
